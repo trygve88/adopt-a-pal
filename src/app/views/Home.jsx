@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllDogs, getDogsWithSkills } from "../api/dogsController";
 import DogCard from "../components/dogCard/DogCard";
-import SkillSelectorPanel from "../components/skillSelector/SkillSelectorPanel";
+import SkillCheckboxes from "../components/skillCheckboxes/SkillCheckboxes";
 import { useSelector } from "react-redux";
 import BreedSelect from "../components/breedSelect/BreedSelect";
 
@@ -16,8 +16,6 @@ const Home = () => {
     console.log(filter.skills);
 
     const search = async () => {
-        // get dogs with skills
-        console.log(filter.skills)
         let resopnse
         if (filter.skills.length>0) {
             resopnse = await getDogsWithSkills(filter.skills)
@@ -37,7 +35,7 @@ const Home = () => {
 
             <div className="row">
                 <div className="skillsPanel col-12 col-lg-3">
-                    <SkillSelectorPanel/>
+                    <SkillCheckboxes/>
                     <BreedSelect/>
                     <button onClick={search} className="btn btn-primary">Search</button>
                 </div>

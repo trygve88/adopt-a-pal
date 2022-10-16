@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSkill } from '../../redux/skillSlice';
 
-const SkillSelector = ({ skill }) => {
+const SkillCheckbox = ({ skill }) => {
 
     const dispatch = useDispatch();
     const filter = useSelector(state => state.filter);
@@ -19,4 +19,4 @@ const SkillSelector = ({ skill }) => {
         </li>
     )
 };
-export default SkillSelector
+export default SkillCheckbox
