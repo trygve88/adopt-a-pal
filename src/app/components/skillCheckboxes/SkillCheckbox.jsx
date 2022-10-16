@@ -6,14 +6,14 @@ const SkillCheckbox = ({ skill }) => {
     const dispatch = useDispatch();
     const filter = useSelector(state => state.filter);
 
-    const test = () => {
+    const click = () => {
         dispatch(toggleSkill(`${skill.id}`))
     }
 
     return (
         <li className="list-group-item">
             <input className="form-check-input" 
-                onClick={test}
+                onClick={click}
                 type="checkbox">
             </input> { skill.name } 
         </li>

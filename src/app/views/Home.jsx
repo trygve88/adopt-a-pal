@@ -13,7 +13,7 @@ const Home = () => {
         search() 
     },[])
 
-    console.log(filter.skills);
+    console.log(filter)
 
     const search = async () => {
         let resopnse

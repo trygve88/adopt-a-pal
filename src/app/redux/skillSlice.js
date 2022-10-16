@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     skills: [],
+    breed: null
 }
 
 export const skillSlice = createSlice({
@@ -16,9 +17,12 @@ export const skillSlice = createSlice({
                 state.skills = [...state.skills, action.payload]
             }
         },
+        setBreed: (state,action) => {
+            state.breed = action.payload
+        },
     },
 })
 
-export const { toggleSkill } = skillSlice.actions
+export const { toggleSkill, setBreed } = skillSlice.actions
 
 export default skillSlice.reducer

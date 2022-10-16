@@ -16,3 +16,4 @@ export const getDogsWithSkills = async (ids) => {
 	const response = await fetch(`${url}`)
 	return await response.json()
 }
+
