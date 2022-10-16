@@ -3,6 +3,7 @@ import { getAllDogs, getDogsWithSkills } from "../api/dogsController";
 import DogCard from "../components/dogCard/DogCard";
 import SkillSelectorPanel from "../components/skillSelector/SkillSelectorPanel";
 import { useSelector } from "react-redux";
+import BreedSelect from "../components/breedSelect/BreedSelect";
 
 const Home = () => {
     const [ dogCards, setDogCards ] = useState([]);
@@ -37,6 +38,7 @@ const Home = () => {
             <div className="row">
                 <div className="skillsPanel col-12 col-lg-3">
                     <SkillSelectorPanel/>
+                    <BreedSelect/>
                     <button onClick={search} className="btn btn-primary">Search</button>
                 </div>
 

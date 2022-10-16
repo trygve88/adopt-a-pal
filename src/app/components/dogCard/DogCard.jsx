@@ -14,7 +14,7 @@ const DogCard = ({ dog }) => {
                 <DogImage img_url={dog.img_url} />
     
                 <div className="dog-name mx-auto">
-                    <p> { dog.name } ({ dog.breed })</p>
+                    <p> { dog.name } ({ dog.breed.name })</p>
                 </div>
                 
                 <div className="dog-skills mx-auto d-inline">

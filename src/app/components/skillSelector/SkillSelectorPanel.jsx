@@ -1,7 +1,7 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { getAllSkills } from "../../api/skillController";
 import SkillSelector from "./SkillSelector";
-import React from "react";
 
 const SkillSelectorPanel = ({search} ) => {
     const [ skillSelectorList, setSkillSelectorList ] = useState([]);
