@@ -32,8 +32,9 @@ const Home = () => {
     
 	return (
         <>
-            <div className="row">
+        <div className="container">
 
+            <div className="row">
                 <div className="skillsPanel col-12 col-lg-3">
                     <SkillSelectorPanel/>
                     <button onClick={search} className="btn btn-primary">Search</button>
@@ -44,8 +45,10 @@ const Home = () => {
                         { dogCards }
                     </div>
                 </div>
-
             </div>
+            
+        </div>
+          
         </>
     )
 };
