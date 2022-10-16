@@ -2,7 +2,6 @@ import DogImage from "./DogImage";
 import SkillIcon from "./SkillIcon";
 
 const DogCard = ({ dog }) => {
-
     const skillIcons = []
     dog.skills.forEach(skill => {
         skillIcons.push(<SkillIcon key={skill.name} skill={skill.name}/>)
@@ -12,7 +11,7 @@ const DogCard = ({ dog }) => {
         <div className="dog-card-col col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
             <div className="dog-card card pb-2">
            
-                <DogImage breed={dog.breed} />
+                <DogImage img_url={dog.img_url} />
     
                 <div className="dog-name mx-auto">
                     <p> { dog.name } ({ dog.breed })</p>

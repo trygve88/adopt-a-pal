@@ -22,7 +22,7 @@ const Home = () => {
             resopnse = await getDogsWithSkills(filter.skills)
         }
         else {
-        resopnse = await getAllDogs()
+            resopnse = await getAllDogs()
         }
         if (resopnse) {
             resopnse = resopnse.map((dog, index) => <DogCard key={index} dog={dog} />)
