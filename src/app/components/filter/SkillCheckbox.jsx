@@ -9,12 +9,9 @@ const SkillCheckbox = ({ skill }) => {
     const click = () => {
         dispatch(toggleSkill(`${skill.id}`))
     }
-
     return (
         <li className="list-group-item">
-            <input className="form-check-input" 
-                onClick={click}
-                type="checkbox">
+            <input className="form-check-input" onChange={click} type="checkbox" >
             </input> { skill.name } 
         </li>
     )

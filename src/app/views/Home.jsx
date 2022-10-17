@@ -14,7 +14,7 @@ const Home = () => {
         search() 
     },[])
 
-    //console.log(filter)
+    console.log(filter)
 
     const search = async () => {
         let resopnse

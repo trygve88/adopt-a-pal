@@ -16,7 +16,6 @@ export const getDogsByFiler = async (filter) => {
 	filter.skills.forEach(skill => {
 		url += `filters=${skill}&`
     });
-	console.log(url);
 	const response = await fetch(`${url}`)
 	return await response.json()
 }
