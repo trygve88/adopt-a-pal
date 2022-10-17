@@ -4,6 +4,7 @@ import DogCard from "../components/dogCard/DogCard";
 import SkillCheckboxes from "../components/skillCheckboxes/SkillCheckboxes";
 import { useSelector } from "react-redux";
 import BreedSelect from "../components/breedSelect/BreedSelect";
+import FilterPanel from "../components/filterPanel/FilterPanel";
 
 const Home = () => {
     const [ dogCards, setDogCards ] = useState([]);
@@ -33,7 +34,7 @@ const Home = () => {
         <div className="container">
 
             <div className="row">
-                <div className="skillsPanel col-12 col-lg-3">
+                <div className="skillsPanel col-12 col-lg-3 d-none d-lg-block">
                     <SkillCheckboxes/>
                     <BreedSelect/>
                     <button onClick={search} className="btn btn-primary">Search</button>
@@ -44,6 +45,8 @@ const Home = () => {
                         { dogCards }
                     </div>
                 </div>
+
+                <FilterPanel/>
             </div>
             
         </div>
