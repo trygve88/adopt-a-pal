@@ -8,8 +8,8 @@ const SkillCheckboxes = ({search} ) => {
 
     const init = async () => { 
         let skills = await getAllSkills()
-        const skillCheckboxes = skills.map((skill, index) => 
-            <SkillCheckbox search={search} key={index} skill={skill} />)
+         const skillCheckboxes = skills.map((skill, index) => 
+           <SkillCheckbox search={search} key={index} skill={skill} />)
         setSkillCheckboxes(skillCheckboxes)
     }
 
@@ -20,7 +20,7 @@ const SkillCheckboxes = ({search} ) => {
 	return (
         <>
             <p> Skills </p>
-            <p> { skillCheckboxes } </p>
+            <p> { skillCheckboxes } </p>  
         </>
     )
 };

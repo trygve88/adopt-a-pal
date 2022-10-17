@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { getAllDogs, getDogsByFiler, getDogsWithSkills } from "../api/dogsController";
 import DogCard from "../components/dogCard/DogCard";
-import SkillCheckboxes from "../components/skillCheckboxes/SkillCheckboxes";
-import { useSelector } from "react-redux";
-import BreedSelect from "../components/breedSelect/BreedSelect";
+import SkillCheckboxes from "../components/filter/SkillCheckboxes";
+import BreedSelect from "../components/filter/BreedSelect";
 import FilterModal from "../components/filterModal/FilterModal";
 
 const Home = () => {
@@ -45,8 +45,7 @@ const Home = () => {
                         { dogCards }
                     </div>
                 </div>
-
-                <FilterModal/>
+                <FilterModal search={search}/>
             </div>
             
         </div>
