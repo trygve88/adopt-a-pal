@@ -8,12 +8,12 @@ export const getAllDogs = async () => {
 }
 
 // /withSkill?skillIds=1&
-export const getDogsWithSkills = async (ids) => {
-	let url = "https://adopt-a-pal-api.herokuapp.com/api/v1/dogs/withSkill?"
-	ids.forEach(id => {
-		url += `skillIds=${id}&`
+export const getDogsByFiler = async (filter) => {
+	let url = "https://adopt-a-pal-api.herokuapp.com/api/v1/dogs/filter?"
+	url += `filters=${filter.breed}&`
+	filter.skills.forEach(skill => {
+		url += `filters=${skill}&`
     });
 	const response = await fetch(`${url}`)
 	return await response.json()
 }
-

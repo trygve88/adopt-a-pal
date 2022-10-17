@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllDogs, getDogsWithSkills } from "../api/dogsController";
+import { getAllDogs, getDogsByFiler, getDogsWithSkills } from "../api/dogsController";
 import DogCard from "../components/dogCard/DogCard";
 import SkillCheckboxes from "../components/skillCheckboxes/SkillCheckboxes";
 import { useSelector } from "react-redux";
@@ -13,20 +13,19 @@ const Home = () => {
         search() 
     },[])
 
-    console.log(filter)
+    //console.log(filter)
 
     const search = async () => {
         let resopnse
-        if (filter.skills.length>0) {
-            resopnse = await getDogsWithSkills(filter.skills)
-        }
-        else {
+        if ((!filter.breed || filter.breed == "any") && filter.skills.length<1) {
             resopnse = await getAllDogs()
         }
-        if (resopnse) {
-            resopnse = resopnse.map((dog, index) => <DogCard key={index} dog={dog} />)
-            setDogCards(resopnse)
+        else {
+            resopnse = await getDogsByFiler(filter)
         }
+
+        resopnse = resopnse.map((dog, index) => <DogCard key={index} dog={dog} />)
+        setDogCards(resopnse)
     }
     
 	return (
