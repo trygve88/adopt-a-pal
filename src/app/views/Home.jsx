@@ -4,7 +4,7 @@ import DogCard from "../components/dogCard/DogCard";
 import SkillCheckboxes from "../components/skillCheckboxes/SkillCheckboxes";
 import { useSelector } from "react-redux";
 import BreedSelect from "../components/breedSelect/BreedSelect";
-import FilterPanel from "../components/filterPanel/FilterPanel";
+import FilterModal from "../components/filterModal/FilterModal";
 
 const Home = () => {
     const [ dogCards, setDogCards ] = useState([]);
@@ -46,7 +46,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <FilterPanel/>
+                <FilterModal/>
             </div>
             
         </div>
