@@ -10,10 +10,13 @@ export const getAllDogs = async () => {
 // /withSkill?skillIds=1&
 export const getDogsByFiler = async (filter) => {
 	let url = "https://adopt-a-pal-api.herokuapp.com/api/v1/dogs/filter?"
-	url += `filters=${filter.breed}&`
+	if (filter.breed && filter.breed !== 'any'){
+		url += `filters=${filter.breed}&`
+	} 
 	filter.skills.forEach(skill => {
 		url += `filters=${skill}&`
     });
+	console.log(url);
 	const response = await fetch(`${url}`)
 	return await response.json()
 }

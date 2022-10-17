@@ -8,7 +8,7 @@ const DogCard = ({ dog }) => {
     });
  
     return (
-        <div className="dog-card-col col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+        <div className="dog-card-col col-6 col-lg-4 col-xl-3 mb-4">
             <div className="dog-card card pb-2">
            
                 <DogImage img_url={dog.img_url} />
