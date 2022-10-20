@@ -24,7 +24,6 @@ const Home = () => {
         else {
             resopnse = await getDogsByFiler(filter)
         }
-
         resopnse = resopnse.map((dog, index) => <DogCard key={index} dog={dog} />)
         setDogCards(resopnse)
     }

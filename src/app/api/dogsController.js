@@ -19,3 +19,8 @@ export const getDogsByFiler = async (filter) => {
 	const response = await fetch(`${url}`)
 	return await response.json()
 }
+
+export const getDogById = async (id) => {
+	const response = await fetch(`https://adopt-a-pal-api.herokuapp.com/api/v1/dogs/${id}`)
+	return await response.json()
+}

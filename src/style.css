@@ -2,15 +2,23 @@ p {
 	font-size: 1.2em;
 }
 
+.dog-card {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+	height: 240px;
+}
+
+.dog-card:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
 .dog-img {
 	object-fit: cover;
 	width: 100%;
 	height: 160px;
 }
 
-.modal-dialog {
-	position:fixed;
-	right:0;
-	left:0;
-	bottom:0;
- }  
+.dog-img-large {
+	width: auto;
+	max-height: 600px;
+}
