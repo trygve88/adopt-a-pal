@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { getAllDogs, getDogsByFiler, getDogsWithSkills } from "../api/dogsController";
+import { getAllDogs, getDogsByFiler } from "../api/dogsController";
 import DogCard from "../components/dogCard/DogCard";
 import SkillCheckboxes from "../components/filter/SkillCheckboxes";
 import BreedSelect from "../components/filter/BreedSelect";
-import FilterModal from "../components/filterModal/FilterModal";
 
 const Home = () => {
     const [ dogCards, setDogCards ] = useState([]);
@@ -13,8 +12,6 @@ const Home = () => {
     useEffect(() => {
         search() 
     },[])
-
-    //console.log(filter)
 
     const search = async () => {
         let resopnse
@@ -29,27 +26,17 @@ const Home = () => {
     }
     
 	return (
-        <>
-        <div className="container">
-
-            <div className="row">
-                <div className="skillsPanel col-12 col-lg-3 d-none d-lg-block">
-                    <SkillCheckboxes/>
-                    <BreedSelect/>
-                    <button onClick={search} className="btn btn-primary">Search</button>
-                </div>
-
-                <div className="feed col-12 col-lg-9">
-                    <div className="feed-row row">
-                        { dogCards }
-                    </div>
-                </div>
-                <FilterModal search={search}/>
+        <div className="row">
+            <div className="skillsPanel col-12 col-lg-3">
+                <SkillCheckboxes/>
+                <BreedSelect/>
+                <button onClick={search} className="btn btn-primary">Search</button>
             </div>
-            
+
+            <div className="feed col-12 col-lg-9 row">
+                { dogCards }
+            </div>
         </div>
-          
-        </>
     )
 };
 export default Home

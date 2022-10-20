@@ -16,11 +16,9 @@ const Dog = () => {
     }
 
 	return (
-        <div className="container">
-            <div className="row d-flex justify-content-center">
-                {dog}  
-            </div>         
-        </div>  
+        <div className="row d-flex justify-content-center">
+            {dog}  
+        </div>         
     )
 };
 export default Dog

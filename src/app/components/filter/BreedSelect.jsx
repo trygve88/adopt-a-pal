@@ -25,7 +25,7 @@ const BreedSelect = () => {
     }
 
 	return (
-        <div className="mb-3">
+        <div className="breed-select mb-3">
             <p> Breed </p>
             <select className="form-select" onChange={change}>   
                 <option>any</option>

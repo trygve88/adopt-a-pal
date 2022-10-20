@@ -18,10 +18,10 @@ const SkillCheckboxes = ({search} ) => {
     },[])
 
 	return (
-        <>
-            <p> Skills </p>
-            <p> { skillCheckboxes } </p>  
-        </>
+        <div className="skill-checkboxes mb-3">
+            <p>Skills</p>
+            { skillCheckboxes }
+        </div>
     )
 };
 export default SkillCheckboxes
